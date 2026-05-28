@@ -428,3 +428,18 @@ section::after {
     display: block;
     text-align: center;
 }
+
+.viewButton{
+    height: 40px;
+    width: auto;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    color: rgb(214, 154, 25);
+    background: none;
+    font-weight: bold;
+    font-family: text;
+    margin-top: 10px;
+    text-decoration: underline;
+}
