@@ -81,12 +81,14 @@ textarea.contactInput {
 
 h1{
     font-size: 100px;
+    margin: 0;
 }
 
 #socialsDiv{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin-botton: 8px;
 }
 
 .socialsButton{
@@ -99,6 +101,17 @@ h1{
     justify-content: center;
     align-items: center;
     background-size: cover;
+}
+
+#locaition {
+    margin: 0 0 4px 0;
+}
+
+#basicInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
 }
 
 .socialsButton:hover{
@@ -788,19 +801,19 @@ footer{
     }
 }
 
-/* ── MOBILE (max 600px) ── */
+
 @media screen and (max-width: 600px) {
     html, body {
         overflow-x: hidden;
         width: 100%;
-        /* Remove the fixed grid rows for mobile */
+
         display: block;
         height: auto;
     }
 
     #Head {
         display: flex;
-        flex-direction: column;  /* image on top, text below */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         padding: 30px 20px;
@@ -838,7 +851,7 @@ footer{
     }
 
     #buttonsDiv {
-        flex-direction: row;  /* keep buttons side by side if they fit */
+        flex-direction: row;  
         gap: 10px;
     }
 

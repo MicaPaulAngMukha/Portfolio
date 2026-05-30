@@ -42,8 +42,8 @@
                 </a>
             </div>
             <div id="buttonsDiv">
-                <button id="emailButton" class="textStroke">Send Email</button>
-                <button id="CVButton" class="textStroke">Download CV</button>
+                <button id="emailButton" class="textStroke" onclick="document.getElementById('Contacts').scrollIntoView({ behavior: 'smooth' })">Send Email</button>
+                <button id="CVButton" class="textStroke" onclick="const a=document.createElement('a'); a.href='Calingo_CV.pdf'; a.download='Calingo_CV.pdf'; a.click()">Download CV</button>
             </div>
         </div>
     </div>
