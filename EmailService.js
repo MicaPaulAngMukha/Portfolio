@@ -16,7 +16,7 @@ function sendEmail() {
         message: message,
     };
 
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+    emailjs.send("service_kyny4km", "template_g8826i8", templateParams)
         .then(() => {
             alert("Message sent! I'll get back to you soon 💛");
         })

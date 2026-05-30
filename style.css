@@ -757,3 +757,157 @@ footer{
         linear-gradient(to bottom, transparent 80%, #F3D6AB 100%);
 }
 
+/* ── TABLET (max 1024px) ── */
+@media screen and (max-width: 1024px) {
+    #Head {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #portfolioImageWrapper {
+        height: 350px;
+        width: 220px;
+    }
+
+    #socialsDiv, #buttonsDiv {
+        justify-content: center;
+    }
+
+    #TechSocials {
+        grid-template-columns: 1fr;
+    }
+
+    #ContactDisplay {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── MOBILE (max 600px) ── */
+@media screen and (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        /* Remove the fixed grid rows for mobile */
+        display: block;
+        height: auto;
+    }
+
+    #Head {
+        display: flex;
+        flex-direction: column;  /* image on top, text below */
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        min-height: 100svh;
+        background-size: cover, cover;
+    }
+
+    #portfolioImageWrapper {
+        height: 280px;
+        width: 180px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #basicInfo {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin: 10px 0;
+    }
+
+    #name {
+        -webkit-text-stroke: 5px #996615;
+    }
+
+    #socialsDiv, #buttonsDiv {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #buttonsDiv {
+        flex-direction: row;  /* keep buttons side by side if they fit */
+        gap: 10px;
+    }
+
+    button {
+        font-size: 20px;
+        height: 50px;
+        padding: 5px 10px;
+    }
+
+    #infoSection {
+        display: block;
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+
+    .titles {
+        font-size: 28px;
+    }
+
+    .signboardText {
+        font-size: 20px;
+    }
+
+    .projectCard {
+        min-width: 220px;
+        height: auto;
+    }
+
+    .educationContainer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    #ContactDisplay {
+        grid-template-columns: 1fr;
+    }
+
+    #Communication {
+        align-items: center;
+        text-align: center;
+    }
+
+    #Socials {
+        justify-content: center;
+    }
+
+    .galleryImg {
+        width: 220px;
+        height: 150px;
+    }
+
+    #TechSocials {
+        grid-template-columns: 1fr;
+    }
+
+    #Gallery {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+    }
+}
