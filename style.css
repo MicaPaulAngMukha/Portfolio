@@ -51,6 +51,21 @@ body{
     pointer-events: none;
 }
 
+#name {
+    -webkit-text-stroke: 10px #996515;
+}
+
+#emailButton {
+    -webkit-text-stroke: 6px #996515;
+}
+
+textarea.contactInput {
+    border: 2px solid #EBC89D;
+    background-color: rgb(252, 255, 233);
+    font-size: 16px;
+    color: #6B430E;
+}
+
 @font-face {
   font-family: 'AlanSans';
   src: url('AlanSans-VariableFont_wght.ttf') format('truetype');
@@ -564,19 +579,30 @@ body.night #themeToggle:hover {
 
 body.night {
     background-color: #0d1b2a;
-    color: #c9d6e3;
+    color: #C0C0C0;
 }
 
 body.night #Head {
     background-image: 
         linear-gradient(to bottom, transparent 80%, #0d1b2a 100%),
-        url("BackgroundGIF.gif");
+        url("NightModeAssets/NightMode_HeadBG_GIF.gif");
+}
+
+body.night #name {
+    color: #FFFFFF;
+    -webkit-text-stroke: 10px #4a7ab5;
+    paint-order: stroke fill;
+}
+
+
+body.night #portfolioImageWrapper::after {
+    background-image: url("NightModeAssets/Nightmode_Border.png");
 }
 
 body.night #infoSection {
     background-image: 
         linear-gradient(to bottom, #0d1b2a 30%, transparent 50%),
-        url("bodyBackground.png");
+        url("NightModeAssets/darkModeBodyBackground.png");
 }
 
 body.night .titles {
@@ -628,7 +654,71 @@ body.night .ChaserLightReverse {
 }
 
 body.night .signboardText {
-    color: #7aafd4;
+    color: #FFFFFF;
+}
+
+body.night .titles {
+    color: #FFFFFF;
+}
+
+body.night .titles {
+    color: #FFFFFF;
+}
+
+body.night .textStroke {
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #4a7ab5;
+    paint-order: stroke fill;
+}
+
+body.night h2 {
+    color: #FFFFFF;
+}
+
+body.night p,
+body.night h3,
+body.night h4,
+body.night h5 {
+    color: #C0C0C0;
+}
+
+body.night .projectCard p,
+body.night .stackCategory {
+    color: #C0C0C0;
+}
+
+body.night .tag {
+    border-color: #4a6fa5;
+    color: #C0C0C0;
+}
+
+body.night button {
+    background-color: #1a3a6a;
+    color: #FFFFFF;
+}
+
+body.night #emailButton {
+    background-color: rgba(26, 58, 106, 0.5);
+    border: 3px solid #4a7ab5;
+    -webkit-text-stroke: 6px #1a3a6a;
+}
+
+body.night #emailButton:hover {
+    background-color: rgba(42, 82, 140, 0.75);
+    border-color: #6a9ad5;
+}
+
+body.night #CVButton:hover {
+    background-color: #2a5a9a;
+}
+
+
+body.night .socialsButton {
+    background-color: rgba(26, 58, 106, 0.75);
+}
+
+body.night .socialsButton:hover {
+    background-color: #2a5a9a;
 }
 
 body.night .carouselBtn {
@@ -638,13 +728,24 @@ body.night .carouselBtn {
 
 body.night input[type="text"],
 body.night textarea {
-    background-color: rgba(20, 40, 70, 0.75);
-    border-color: #2a4a7a;
-    color: #c9d6e3;
+    background-color: rgba(26, 42, 74, 0.75);
+    border-color: #4a7ab5;
+    color: #FFFFFF;
+}
+
+body.night input[type="text"]::placeholder,
+body.night textarea::placeholder {
+    color: #8aabcc;
 }
 
 body.night .contactSendBtn {
     background-color: #1a3a6a;
+    color: #FFFFFF;
+    border: 2px solid #4a7ab5;
+}
+
+body.night .contactSendBtn:hover {
+    background-color: #2a5a9a;
 }
 
 body.night footer {
@@ -655,3 +756,4 @@ footer{
     background-image: 
         linear-gradient(to bottom, transparent 80%, #F3D6AB 100%);
 }
+
