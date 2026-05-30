@@ -5,6 +5,7 @@ body{
     height: 100vh;
     margin: 0px;
     padding: 0px;
+    font-family: 'AlanSans', sans-serif;
 }
 
 #Head{
@@ -202,7 +203,7 @@ button{
 }
 
 .signboardText{
-  height: 70px; /* Must match the .signboard-window height perfectly */
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,9 +269,9 @@ button{
 #TechSocials{
     display: grid;
     grid-template-columns: 2fr 2fr;
-    gap: 5px;
     align-items: center;
     justify-content: center;
+    width:100%;
 }
 
 
@@ -352,13 +353,14 @@ button{
     align-items: center;
     gap: 10px;
     width: 100%;
+    overflow: hidden;
 }
 
 .carousel {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    overflow-x: hidden; /* hides scrollbar, JS handles scrolling */
+    overflow-x: hidden;
     scroll-behavior: smooth;
     padding: 20px 0;
     flex: 1;
@@ -423,12 +425,6 @@ button{
     background-color: #bc7c1d;
 }
 
-section::after {
-    content: "✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦";
-    display: block;
-    text-align: center;
-}
-
 .viewButton{
     height: 40px;
     width: auto;
@@ -442,4 +438,220 @@ section::after {
     font-family: text;
     margin-top: 10px;
     text-decoration: underline;
+}
+
+#loadingScreen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Gallery{
+    width: 1920px;
+    max-width: 1080px;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.galleryImg {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+#Contacts{
+    display: grid;
+    grid-template-rows: 0.5fr 2fr;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+#ContactDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+#projects{
+    width: 100%;
+}
+
+#Communication{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#sendEmail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.contactInput {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #EBC89D;
+    background-color: rgb(246, 216, 166, 0.75);
+    font-size: 16px;
+    color: #6B430E;
+    font-family: AlanSans, sans-serif;
+    box-sizing: border-box;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #EBC89D;
+    background-color: rgb(252, 255, 233);
+    font-size: 16px;
+    color: #6B430E;
+    font-family: AlanSans, sans-serif;
+}
+
+#themeToggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #996515;
+    border: 3px solid #EBC89D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: background-color 0.3s ease, border 0.3s ease, transform 0.2s ease;
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+
+#themeToggle:hover {
+    transform: scale(1.15);
+    background-color: #bc7c1d;
+}
+
+#themeToggle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Night mode overrides */
+body.night #themeToggle {
+    background-color: #1a2a4a;
+    border: 3px solid #4a6fa5;
+}
+
+body.night #themeToggle:hover {
+    background-color: #2a3f6a;
+}
+
+body.night {
+    background-color: #0d1b2a;
+    color: #c9d6e3;
+}
+
+body.night #Head {
+    background-image: 
+        linear-gradient(to bottom, transparent 80%, #0d1b2a 100%),
+        url("BackgroundGIF.gif");
+}
+
+body.night #infoSection {
+    background-image: 
+        linear-gradient(to bottom, #0d1b2a 30%, transparent 50%),
+        url("bodyBackground.png");
+}
+
+body.night .titles {
+    color: #7aafd4;
+}
+
+body.night .container {
+    background-color: rgba(20, 40, 70, 0.75);
+    border-color: #2a4a7a;
+}
+
+body.night .educationContainer {
+    background-color: rgba(20, 40, 70, 0.75);
+    border-color: #2a4a7a;
+}
+
+body.night .educationIcon {
+    background-color: #1a3a5a;
+}
+
+body.night .projectCard {
+    background-color: rgba(20, 40, 70, 0.75);
+    border-color: #2a4a7a;
+}
+
+body.night .tag {
+    border-color: #4a6fa5;
+    color: #7aafd4;
+}
+
+body.night .stackCategory {
+    color: #7aafd4;
+}
+
+body.night .ChaserLight,
+body.night .ChaserLightReverse {
+    background: linear-gradient(
+        90deg,
+        #2a5a8a 0%,
+        #2a5a8a 40%,
+        #ffffff 50%,
+        #2a5a8a 60%,
+        #2a5a8a 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+body.night .signboardText {
+    color: #7aafd4;
+}
+
+body.night .carouselBtn {
+    background-color: rgba(26, 42, 74, 0.75);
+    border-color: #4a6fa5;
+}
+
+body.night input[type="text"],
+body.night textarea {
+    background-color: rgba(20, 40, 70, 0.75);
+    border-color: #2a4a7a;
+    color: #c9d6e3;
+}
+
+body.night .contactSendBtn {
+    background-color: #1a3a6a;
+}
+
+body.night footer {
+    color: #7aafd4;
+}
+
+footer{
+    background-image: 
+        linear-gradient(to bottom, transparent 80%, #F3D6AB 100%);
 }

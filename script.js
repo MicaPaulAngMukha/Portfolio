@@ -4,18 +4,16 @@ function scrollCarousel(direction, carouselId) {
 }
 
 const projects = [
-    { name: "Meowsic", img: "meowsic.png", description: "A music app for cats", url: "https://github.com/..." },
-    { name: "The Garden Of Eden", img: "eden.png", description: "A visual novel", url: "https://github.com/..." },
-    { name: "FindAFriend", img: "findafriend.png", description: "A pet adoption app", url: "https://github.com/..." },
-    { name: "Enroll360", img: "enroll360.png", description: "An enrollment system", url: "https://github.com/..." },
+    { name: "Meowsic", img: "Meowsic.png", description: "An Advertisement-free music app <br>where you can choose <br>how you want to experience your music.", url: "https://drive.google.com/file/d/11CJ_FfMzHvv3lmGSQvC8rTf-pu5cHQkm/view?usp=sharing" },
+    { name: "The Garden Of Eden", img: "GardenOfEden.jpg", description: "A stressed college student seeks <br>to find an easier way than a late night <br>cram. Will he discover the truth <br>of Humanity's first home?", url: "https://github.com/..." },
+    { name: "FindAFriend", img: "FindAFriend.png", description: "A local messaging app <br>made to send messages and conntect.", url: "https://drive.google.com/file/d/1yBq4vjOuHGR_HC_LAaGttMFp1r2ORhWr/view?usp=sharing" },
 ];
 
-// FIX 1: competitions data was missing entirely!
 const competitions = [
-    { name: "Collaboratech 2026 - Android Hackathon", img: "meowsic.png", placement: "Second Runner Up", description: "Short description here" },
-    { name: "Tagisan ng Talino 2026 - Android Hackathon", img: "eden.png", placement: "Second Runner Up", description: "Short description here" },
-    { name: "Collaboratech 2025 - Figma Workshop", img: "findafriend.png", placement: "Champion", description: "Short description here" },
-    { name: "hack-it! The New Era of Banking", img: "enroll360.png", placement: "Participant", description: "Short description here" },
+    { name: "Collaboratech 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Short description here" },
+    { name: "Tagisan ng Talino 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Short description here" },
+    { name: "Collaboratech 2025", type: "UI/UX Design", placement: "Champion", description: "Short description here" },
+    { name: "Hack-it! The New Era of Banking", type: "Hackathon", placement: "Participant", description: "Short description here" },
 ];
 
 const techStack = [
@@ -30,12 +28,21 @@ const devTools = [
     { category: "Sprite/Art Creation", tags: ["Clip Studio Paint"] },
 ];
 
+const Gallery = [
+    {category: "Competitions", url: "ImagesCompe/CollaboratechTeam.jpg"},
+    {category: "Competitions", url: "ImagesCompe/CollaboratechJudging.jpg"},
+    {category: "Competitions", url: "ImagesCompe/TagisanNgTalinoTeam.jpg"},    
+    {category: "Competitions", url: "ImagesCompe/FigmaWorkshop.jpg"},
+    {category: "Competitions", url: "ImagesCompe/HackIteam.jpg"},
+    {category: "Competitions", url: "ImagesCompe/HackItParticipants.jpg"},
+
+];
+
 function renderCarousel(carouselId, dataArray, cardTemplate) {
     const carousel = document.getElementById(carouselId);
     carousel.innerHTML = dataArray.map(cardTemplate).join('');
 }
 
-// FIX 2: techCategory was defined twice, removed the duplicate
 function techCategory(section) {
     const tagHTML = section.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
     return `
@@ -46,8 +53,8 @@ function techCategory(section) {
 
 function projectCard(project) {
     return `
-        <div class="projectCard">
-            <img src="${project.img}" alt="${project.name}">
+        <div class="projectCard" style="display: flex; flex-direction: column; justify-content:center; align-items: center;">
+            <img src="${project.img}" alt="${project.name}" style="height: 150px; width: 150px;">
             <h2>${project.name}</h2>
             <p>${project.description}</p>
             <a href="${project.url}" target="_blank" rel="noopener noreferrer">
@@ -57,26 +64,53 @@ function projectCard(project) {
     `;
 }
 
-// FIX 3: competitionCard was missing entirely!
 function competitionCard(competition) {
     return `
         <div class="projectCard">
-            <img src="${competition.img}" alt="${competition.name}">
             <h2>${competition.name}</h2>
+            <h3>${competition.type}</h3>
             <h4>${competition.placement}</h4>
             <p>${competition.description}</p>
         </div>
     `;
 }
 
+function galleryCard(photo) {
+    return `
+        <img class="galleryImg" src="${photo.url}" alt="gallery photo">
+    `;
+}
+
+
+function toggleTheme() {
+    const body = document.body;
+    const icon = document.getElementById('themeIcon');
+    
+    body.classList.toggle('night');
+    
+    if (body.classList.contains('night')) {
+        icon.src = 'icons8-sun-50.png';
+        localStorage.setItem('theme', 'night');
+    } else {
+        icon.src = 'icons8-moon-and-stars-50.png';
+        localStorage.setItem('theme', 'day');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderCarousel('projectCarousel', projects, projectCard);
     renderCarousel('competitionsCarousel', competitions, competitionCard);
+    renderCarousel('galleryCarousel', Gallery, galleryCard);
 
     const techStackContainer = document.querySelector('#TechStack .container');
     techStackContainer.innerHTML = techStack.map(techCategory).join('');
 
-    // FIX 4: devToolsContainer was declared twice with const, removed the duplicate
     const devToolsContainer = document.querySelector('#DevelopmentTools .container');
     devToolsContainer.innerHTML = devTools.map(techCategory).join('');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'night') {
+        document.body.classList.add('night');
+        document.getElementById('themeIcon').src = 'icons8-sun-50.png';
+    }
 });
