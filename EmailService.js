@@ -30,6 +30,14 @@ function sendEmail() {
     emailjs.send("service_kyny4km", "template_g8826i8", templateParams)
         .then(() => {
             alert("Message sent! I'll get back to you soon 💛");
+
+            let name = document.getElementById("nameInput");
+            let email = document.getElementById("emailInput");
+            let message = document.getElementById("messageInput");
+
+            name.value = "";
+            email.value = "";
+            message.value = "";
         })
         .catch((error) => {
             console.error("EmailJS error:", error);
