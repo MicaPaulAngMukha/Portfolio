@@ -1,6 +1,17 @@
 emailjs.init("-gtAz8swkgfgUrsZU");
 
+const COOLDOWN_MS = 60000;
+let lastSentTime = 0;
+
 function sendEmail() {
+    const now = Date.now();
+
+    if (now - lastSentTime < COOLDOWN_MS) {
+        const secondsLeft = Math.ceil((COOLDOWN_MS - (now - lastSentTime)) / 1000);
+        alert(`Please wait ${secondsLeft} seconds before sending again.`);
+        return;
+    }
+
     const name = document.querySelector('input[placeholder="Your name"]').value;
     const email = document.querySelector('input[placeholder="Your email"]').value;
     const message = document.querySelector('textarea[placeholder="Your message"]').value;
