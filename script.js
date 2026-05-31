@@ -5,14 +5,14 @@ function scrollCarousel(direction, carouselId) {
 
 const projects = [
     { name: "Meowsic", img: "Meowsic.png", description: "An Advertisement-free music app <br>where you can choose <br>how you want to experience your music.", url: "https://drive.google.com/file/d/11CJ_FfMzHvv3lmGSQvC8rTf-pu5cHQkm/view?usp=sharing" },
-    { name: "The Garden Of Eden", img: "GardenOfEden.jpg", description: "A stressed college student seeks <br>to find an easier way than a late night <br>cram. Will he discover the truth <br>of Humanity's first home?", url: "https://github.com/..." },
+    { name: "The Garden Of Eden", img: "GardenOfEden.jpg", description: "A stressed college student seeks <br>to find an easier way than a late night <br>cram. Will he discover the truth <br>of Humanity's first home?", url: "https://drive.google.com/file/d/1CJKa0owCeKcwgqdl6TzgvawEbMQiPzpg/view?usp=sharing" },
     { name: "FindAFriend", img: "FindAFriend.png", description: "A local messaging app <br>made to send messages and conntect.", url: "https://drive.google.com/file/d/1yBq4vjOuHGR_HC_LAaGttMFp1r2ORhWr/view?usp=sharing" },
 ];
 
 const competitions = [
     { name: "Collaboratech 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Built an e-commerce app named <br>'ShopLift' in under five (5) hours. <br>Worked the backend and database." },
     { name: "Tagisan ng Talino 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Built an e-commerce app <br>in under five (5) hours. <br>Worked the backend and database." },
-    { name: "Collaboratech 2025", type: "UI/UX Design", placement: "Champion", description: "Created a mobile coffee shop design in under three (3) hours with a partner. " },
+    { name: "Collaboratech 2025", type: "UI/UX Design", placement: "Champion", description: "Created a mobile coffee shop design in under <br>three (3) hours with a partner. " },
     { name: "Hack-it! The New Era of Banking", type: "Hackathon", placement: "Participant", description: "Participated in a two (2) day hackathon with a team <br>consisting of four (4) members. Created a KYC application which <br>used Machine Learning (ML) to assist insurance underwriters." },
 ];
 
@@ -33,7 +33,7 @@ const Gallery = [
     {category: "Competitions", url: "ImagesCompe/CollaboratechJudging.jpg"},
     {category: "Competitions", url: "ImagesCompe/TagisanNgTalinoTeam.jpg"},    
     {category: "Competitions", url: "ImagesCompe/FigmaWorkshop.jpg"},
-    {category: "Competitions", url: "ImagesCompe/HackIteam.jpg"},
+    {category: "Competitions", url: "ImagesCompe/HackITeam.jpg"},
     {category: "Competitions", url: "ImagesCompe/HackItParticipants.jpg"},
 
 ];
