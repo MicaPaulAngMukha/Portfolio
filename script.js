@@ -10,10 +10,10 @@ const projects = [
 ];
 
 const competitions = [
-    { name: "Collaboratech 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Short description here" },
-    { name: "Tagisan ng Talino 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Short description here" },
-    { name: "Collaboratech 2025", type: "UI/UX Design", placement: "Champion", description: "Short description here" },
-    { name: "Hack-it! The New Era of Banking", type: "Hackathon", placement: "Participant", description: "Short description here" },
+    { name: "Collaboratech 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Built an e-commerce app named 'ShopLift' <br>in under five (5) hours. Worked the backend and database." },
+    { name: "Tagisan ng Talino 2026", type: "Android Hackathon", placement: "Second Runner Up", description: "Built an e-commerce app <br>in under five (5) hours. Worked the backend and database." },
+    { name: "Collaboratech 2025", type: "UI/UX Design", placement: "Champion", description: "Created a mobile coffee shop design in under three (3) hours with a partner. " },
+    { name: "Hack-it! The New Era of Banking", type: "Hackathon", placement: "Participant", description: "Participated in a two (2) day hackathon with a team consistinf of four (4) members. Created a KYC application which used Machine Learning (ML) to assist insurance underwriters." },
 ];
 
 const techStack = [
