@@ -97,6 +97,75 @@ function toggleTheme() {
     }
 }
 
+// ── Scroll-triggered fade-in animations using Intersection Observer ──
+
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll(
+        '.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .fade-in-stagger'
+    );
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Once visible, stop observing to prevent re-triggering
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// ── Navbar scroll effect ──
+
+function initNavbarScroll() {
+    const navbar = document.getElementById('mainNav');
+    if (!navbar) return;
+
+    let lastScrollY = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        lastScrollY = currentScrollY;
+    }, { passive: true });
+}
+
+// ── Smooth scroll for navigation links ──
+
+function initSmoothScroll() {
+    document.querySelectorAll('.navbar-links a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const navHeight = document.getElementById('mainNav').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: elementPosition - navHeight - 10,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderCarousel('projectCarousel', projects, projectCard);
     renderCarousel('competitionsCarousel', competitions, competitionCard);
@@ -113,4 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('night');
         document.getElementById('themeIcon').src = 'icons8-sun-50.png';
     }
+
+    // Initialize scroll animations, navbar effects, and smooth scrolling
+    initScrollAnimations();
+    initNavbarScroll();
+    initSmoothScroll();
 });

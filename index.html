@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Mica Pauline Calingo — aspiring Game Developer, Backend Developer, and Web Developer. Currently a BSIT student open to collaborations and internships.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="profileImage.jpeg">
     <script src="script.js"></script>
@@ -11,6 +12,19 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="mainNav">
+        <a href="#Head" class="navbar-brand">Mica Pauline</a>
+        <ul class="navbar-links">
+            <li><a href="#Introduction">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Competitions">Competitions</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#Contacts">Contact</a></li>
+        </ul>
+    </nav>
+
     <!--<div id="loadingScreen">
         <div id="loadingBox">
             <p style="color: white; font-weight:bold;">You are about to enter a new territory.</p>
@@ -23,11 +37,11 @@
     </div> -->
 
     <div id="Head">
-        <div id="portfolioImageWrapper">
+        <div id="portfolioImageWrapper" class="fade-in-left">
             <div id="portfolioImage"></div>
         </div>
 
-        <div id = "basicInfo">
+        <div id="basicInfo" class="fade-in-right">
             <p id="locaition" class="textStroke" style="font-size: large;">⚲ Taguig City</p>
             <h1 id="name" class="textStroke">Mica Pauline Calingo</h1>            
             <div id="socialsDiv">
@@ -85,9 +99,9 @@
     </div>
 
     <div id="infoSection">
-        <div id="Introduction" class="titles">
+        <div id="Introduction" class="titles fade-in">
             <p>About Me </p>
-            <div class="container">
+            <div class="container fade-in">
                 <p>
                     Hello, i am Mica Pauline Calingo!
                     <br><br>
@@ -113,7 +127,7 @@
         </div>
 
         <div id="TechSocials">
-            <div id="TechStack">
+            <div id="TechStack" class="fade-in-left">
                 <div class="titles">Tech Stack</div>
 
                 <div class="container">
@@ -121,7 +135,7 @@
                 </div>
             </div>
 
-            <div id="DevelopmentTools">
+            <div id="DevelopmentTools" class="fade-in-right">
                 <div class="titles">
                     Development Tools 
                 </div>
@@ -135,12 +149,12 @@
             ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
         </div>
 
-        <div id="Education" style="gap: 10px; width: 90%;">
+        <div id="Education" class="fade-in">
             <div class="titles">
                 Education 
             </div>
 
-            <div class="educationContainer">
+            <div class="educationContainer fade-in" style="transition-delay: 0.05s;">
                 <div class="educationIcon">
                     <img src="icons8-graduation-80.png" alt="graduationIcon">
                 </div>
@@ -151,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="educationContainer">
+            <div class="educationContainer fade-in" style="transition-delay: 0.12s;">
                 <div class="educationIcon">
                     <img src="icons8-graduation-80.png" alt="graduationIcon">
                 </div>
@@ -162,7 +176,7 @@
                 </div>
             </div>
 
-            <div class="educationContainer">
+            <div class="educationContainer fade-in" style="transition-delay: 0.19s;">
                 <div class="educationIcon">
                     <img src="icons8-graduation-80.png" alt="graduationIcon">
                 </div>
@@ -173,7 +187,7 @@
                 </div>
             </div>
 
-            <div class="educationContainer">
+            <div class="educationContainer fade-in" style="transition-delay: 0.26s;">
                 <div class="educationIcon">
                     <img src="icons8-graduation-80.png" alt="graduationIcon">
                 </div>
@@ -189,11 +203,11 @@
             ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
         </div>
 
-        <div id="Projects">
+        <div id="Projects" class="fade-in">
             <div class="titles">
                 Projects
             </div>
-            <div class="carouselWrapper">
+            <div class="carouselWrapper fade-in-scale">
                 <button class="carouselBtn" onclick="scrollCarousel(-1, 'projectCarousel')">&#8249;</button>
                 <div class="carousel" id="projectCarousel">
                     
@@ -207,11 +221,11 @@
             ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
         </div>
 
-        <div id="Competitions">
+        <div id="Competitions" class="fade-in">
             <div class="titles">
                 Competitions
             </div>
-            <div class="carouselWrapper">
+            <div class="carouselWrapper fade-in-scale">
                 <button class="carouselBtn" id="prevBtn" onclick="scrollCarousel(-1, 'competitionsCarousel')">&#8249;</button>
 
                 <div class="carousel" id="competitionsCarousel">
@@ -226,12 +240,12 @@
             ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
         </div>
 
-        <div id="Gallery">
+        <div id="Gallery" class="fade-in">
             <div class="titles">
                 Gallery 
             </div>
 
-            <div class="carouselWrapper">
+            <div class="carouselWrapper fade-in-scale">
                 <button class="carouselBtn" onclick="scrollCarousel(-1, 'galleryCarousel')">&#8249;</button>
                 <div class="carousel" id="galleryCarousel" style="overflow-x: hidden;">
                     
@@ -244,23 +258,23 @@
             ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
         </div>
 
-        <div id="Contacts">
+        <div id="Contacts" class="fade-in">
             <div class="titles">
                 Get in Touch
             </div>
 
-            <div id="ContactDisplay" class="container">
+            <div id="ContactDisplay" class="container fade-in-scale">
                 <div>
                     <h2>Let's make something that we can be proud of!</h2>
                     <p>Have an idea, a concept, a story you want to collaborate on?</p>
                     <p>You get in touch using these networks. I reply within the day.</p>
 
                     <div id="Communication">
-                        <div id="PhoneNo" style ="display: flex; gap: 5px;">
+                        <div id="PhoneNo" style ="display: flex; gap: 5px; align-items: center;">
                             <img src="icons8-phone-50.png" alt="phoneIcon" style="height: 50px; width: 50px;">
                             <p>+63 915 458 2619</p>
                         </div>
-                        <div id="Email" style ="display: flex; gap: 5px;">
+                        <div id="Email" style ="display: flex; gap: 5px; align-items: center;">
                             <img src="icons8-mail-50.png" alt="emailIcon" style="height: 50px; width: 50px;">
                             <p>micmicpauline@gmail.com</p>
                         </div>
