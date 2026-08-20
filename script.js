@@ -7,6 +7,7 @@ const projects = [
     { name: "Meowsic", img: "Meowsic.png", description: "An Advertisement-free music app <br>where you can choose <br>how you want to experience your music.", url: "https://drive.google.com/file/d/11CJ_FfMzHvv3lmGSQvC8rTf-pu5cHQkm/view?usp=sharing" },
     { name: "The Garden Of Eden", img: "GardenOfEden.jpg", description: "A stressed college student seeks <br>to find an easier way than a late night <br>cram. Will he discover the truth <br>of Humanity's first home?", url: "https://drive.google.com/file/d/1CJKa0owCeKcwgqdl6TzgvawEbMQiPzpg/view?usp=sharing" },
     { name: "FindAFriend", img: "FindAFriend.png", description: "A local messaging app <br>made to send messages and conntect.", url: "https://drive.google.com/file/d/1yBq4vjOuHGR_HC_LAaGttMFp1r2ORhWr/view?usp=sharing" },
+    { name: "ReviewEx", img: "ReviewEx.jpg", description: "An online reviewing app that <br>focuses on making mock exams.", url: "https://review-ex.vercel.app/"}
 ];
 
 const competitions = [
