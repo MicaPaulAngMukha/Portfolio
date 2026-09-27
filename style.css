@@ -849,6 +849,33 @@ input[type="text"]:focus {
     letter-spacing: 0.5px;
 }
 
+/* Link to the published LeadCRM Contact Us form. */
+.contactFormLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 48px;
+    margin: 8px 0 20px;
+    padding: 12px 24px;
+    background-color: #996515;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contactFormLink:hover {
+    background-color: #6B430E;
+}
+
+.contactFormLink:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+}
+
 /* ── THEME TOGGLE ── */
 
 #themeToggle {
